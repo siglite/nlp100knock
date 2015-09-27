@@ -16,7 +16,7 @@ case1 = text[::-1]  # str[start:end:step] : start から end まで step 毎の�
 
 assert case1 == answer
 print("Case 1: '" + case1 + "'")
-# => Case 1: 'desserts'
+# => "Case 1: 'desserts'"
 
 
 # Case 2
@@ -27,7 +27,7 @@ case2 = ''.join(lst)    # => "desserts" ( '' で文字列を連結)
 
 assert case2 == answer
 print("Case 2: '" + case2 + "'")
-# => Case 2: 'desserts'
+# => "Case 2: 'desserts'"
 
 
 # Case 3
@@ -38,4 +38,4 @@ case3 = ''.join(rvs)    # => "desserts"
 
 assert case3 == answer
 print("Case 3: '" + case3 + "'")
-# => Case 3: 'desserts'
+# => "Case 3: 'desserts'"
