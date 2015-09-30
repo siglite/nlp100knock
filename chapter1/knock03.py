@@ -7,18 +7,15 @@
 
 import sys
 
-if sys.version_info.major < 3:
-    # Python 2 の場合
-    import string
-
 text   = "Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."
 answer = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9]
 
 # Case 1
-#########
+##########
 def remove_comma_and_period(strings):
     if sys.version_info.major < 3:
         # Python 2 の場合
+        import string
         s = strings.translate(None, ',.')
     else:
         # Python 3 の場合
@@ -37,7 +34,7 @@ print(result)
 
 
 # Case 2
-########
+##########
 result = []
 words  = text.split()
 
