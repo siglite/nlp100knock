@@ -10,10 +10,22 @@ answer = u"パタトクカシーー"
 
 list1  = list(text1)
 list2  = list(text2)
-result = u""
 
+# Case 1
+##########
+result = u""
 for i in range(len(list1)):
     result += list1[i] + list2[i]
+
+assert result == answer
+print("Result: '" + result + "'")
+
+
+# Case 2
+##########
+result = u""
+for (char1, char2) in zip(list1, list2):
+    result += char1 + char2
 
 assert result == answer
 print("Result: '" + result + "'")
