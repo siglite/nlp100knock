@@ -14,6 +14,8 @@ if sys.version_info.major < 3:
 text   = "Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."
 answer = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9]
 
+# Case 1
+#########
 def remove_comma_and_period(strings):
     if sys.version_info.major < 3:
         # Python 2 の場合
@@ -25,10 +27,22 @@ def remove_comma_and_period(strings):
 
 result = []
 words  = remove_comma_and_period(text).split()
-length = len(words)
 
-for i in range(length):
-    result.append(len(words[i]))
+for word in words:
+    result.append(len(word))
+
+assert result == answer
+print(result)
+# => [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9]
+
+
+# Case 2
+########
+result = []
+words  = text.split()
+
+for word in words:
+    result.append(len(word.rstrip(',.')))
 
 assert result == answer
 print(result)
